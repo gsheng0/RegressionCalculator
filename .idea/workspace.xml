@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32235095-2020-479d-aa35-4aeb3bbf23c0" name="Default Changelist" comment="" />
+    <list default="true" id="32235095-2020-479d-aa35-4aeb3bbf23c0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Function3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ComplexFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Function2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Optimizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Optimizer.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,15 +22,19 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1aaTg2CBxGXX04UH1CMpyX23sAA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />

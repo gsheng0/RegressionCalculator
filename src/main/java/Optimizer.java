@@ -8,10 +8,11 @@ public class Optimizer {
     private int degree = 1;
     private static boolean created = false;
     private static Optimizer instance;
-    private List<Vector> coords = new ArrayList<Vector>();
+    private List<Vector> coords = new ArrayList<>();
     private int runs = 500000;
     private double alpha = 0.000001;//0.000000000001;
-    private static ComplexFunction <Function<Double, Double>, List<Vector>, Double> COST = (func, coords) -> coords.stream().mapToDouble(coord -> Math.pow(func.apply(coord.x) - coord.y, 2)).sum()/coords.size();
+    private static Function3<Vector, Function<Double, Double>, Double, Double> GRADIENT = (vec, function, power) -> 2 * (function.apply(vec.x) - vec.y) * Math.pow(vec.x, power);
+    private static Function2<Function<Double, Double>, List<Vector>, Double> COST = (func, coords) -> coords.stream().mapToDouble(coord -> Math.pow(func.apply(coord.x) - coord.y, 2)).sum()/coords.size();
     private Polynomial function;
     private Optimizer(){
         created = true;
@@ -82,10 +83,8 @@ public class Optimizer {
     public void regress(){
         coords.sort( (o1, o2) -> (o1.x > o2.x ? 1 : -1));
         double minCost = Double.MAX_VALUE;
-        double prevCost = Double.MAX_VALUE;
         Polynomial best = new Polynomial();
         Polynomial testFunction = generateStarterWithDegreeOf(degree);
-        Scanner reader = new Scanner(System.in);
 
         for(int i = 0; i < runs; i++){
             //System.out.println("Function: " + testFunction);
@@ -97,26 +96,19 @@ public class Optimizer {
                 minCost = cost;
             }
 
-
             HashMap<Double, Double> map = testFunction.getPowerToCoefficientMap();
             HashMap<Double, Double> dMap = new HashMap<>();
             for(double power : map.keySet()){
-                Polynomial finalTestFunction = testFunction;
-                double d = 1.0/coords.size() * coords.stream().mapToDouble(vec -> {
-                    double funcOutput = finalTestFunction.function.apply(vec.x);
-                    double expectedOutput = vec.y;
-                    return 2 * (funcOutput - expectedOutput) * Math.pow(vec.x, power);
-                }).sum();
-                //System.out.println("\tDerivative based on term with power of: " + power + ": " + d);
-                dMap.put(power, d);
+                Function<Double, Double> function = testFunction.function;
+                dMap.put(power, 1.0/coords.size() * coords.stream().mapToDouble(vec -> GRADIENT.apply(vec, function, power)).sum());
             }
+
             testFunction = new Polynomial();
             for(double power : map.keySet()) {
                 map.replace(power, map.get(power) - dMap.get(power) * alpha);
                 testFunction.add(new Term(map.get(power), power));
             }
-//            Scanner reader = new Scanner(System.in);
-//            reader.nextLine();
+
             testFunction.clean();
 
         }
