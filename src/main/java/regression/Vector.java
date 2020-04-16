@@ -1,3 +1,5 @@
+package regression;
+
 import java.awt.*;
 
 public class Vector {

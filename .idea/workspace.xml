@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32235095-2020-479d-aa35-4aeb3bbf23c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Function3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ComplexFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Function2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Optimizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Optimizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/nnattempt/Jajtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/nnattempt/Layer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regression/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Function2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regression/Function2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Function3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regression/Function3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Optimizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regression/Optimizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Polynomial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regression/Polynomial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Term.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regression/Term.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regression/Vector.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -45,7 +54,7 @@
   </component>
   <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="App" />
+      <option name="MAIN_CLASS_NAME" value="regression.App" />
       <module name="RegresssionCalculator.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -69,8 +78,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.RegresssionCalculator" />
       <item itemvalue="Application.App" />
+      <item itemvalue="Gradle.RegresssionCalculator" />
     </list>
     <recent_temporary>
       <list>
@@ -108,21 +117,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1366.311.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586973133549" />
-    <state width="1877" height="274" key="GridCell.Tab.0.bottom" timestamp="1586973276770">
+    <state width="1877" height="274" key="GridCell.Tab.0.bottom" timestamp="1587006747149">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="274" key="GridCell.Tab.0.bottom/-1366.311.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586973276770" />
-    <state width="1877" height="274" key="GridCell.Tab.0.center" timestamp="1586973276770">
+    <state width="1877" height="274" key="GridCell.Tab.0.bottom/-1366.311.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587006747149" />
+    <state width="1877" height="274" key="GridCell.Tab.0.center" timestamp="1587006747148">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="274" key="GridCell.Tab.0.center/-1366.311.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586973276770" />
-    <state width="1877" height="274" key="GridCell.Tab.0.left" timestamp="1586973276770">
+    <state width="1877" height="274" key="GridCell.Tab.0.center/-1366.311.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587006747148" />
+    <state width="1877" height="274" key="GridCell.Tab.0.left" timestamp="1587006747148">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="274" key="GridCell.Tab.0.left/-1366.311.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586973276770" />
-    <state width="1877" height="274" key="GridCell.Tab.0.right" timestamp="1586973276770">
+    <state width="1877" height="274" key="GridCell.Tab.0.left/-1366.311.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587006747148" />
+    <state width="1877" height="274" key="GridCell.Tab.0.right" timestamp="1587006747149">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="274" key="GridCell.Tab.0.right/-1366.311.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1586973276770" />
+    <state width="1877" height="274" key="GridCell.Tab.0.right/-1366.311.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587006747149" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1587061053867">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/-1366.311.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587061053867" />
   </component>
 </project>

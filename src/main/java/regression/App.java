@@ -1,3 +1,4 @@
+package regression;
 
 import javax.swing.*;
 import java.awt.*;

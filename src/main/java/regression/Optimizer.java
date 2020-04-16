@@ -1,7 +1,8 @@
+package regression;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Scanner;
 import java.util.function.Function;
 
 public class Optimizer {
@@ -60,12 +61,12 @@ public class Optimizer {
             double dA = 1.0/coords.size() * coords.stream().mapToDouble(vec -> {//IN TERMS OF A
                 //Write polynomial in terms of one of the variables
                 Polynomial deriv = Polynomial.parsePoly(2 * Math.pow(vec.x, 2.0) + "a + " + 2 * b * vec.x + " - " + 2 * vec.x * vec.y, 'a');
-                System.out.println("\tdA for Vector + " + vec + ": " + deriv);
+                System.out.println("\tdA for regression.Vector + " + vec + ": " + deriv);
                 return deriv.function.apply(a);
             }).sum();
             double dB = 1.0/coords.size() * coords.stream().mapToDouble(vec -> {
                 Polynomial deriv = Polynomial.parsePoly(2 * a * vec.x + " - " + 2 * vec.y + " + " + 2 + "b", 'b');
-                System.out.println("\tdB for Vector + " + vec + ": " + deriv);
+                System.out.println("\tdB for regression.Vector + " + vec + ": " + deriv);
                 return deriv.function.apply(b);
             }).sum();
             System.out.println("\tdA: " + dA);
