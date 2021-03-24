@@ -36,3 +36,10 @@ From these gradient values, the parameters of the function can be updated as suc
 
 ![alt text](https://github.com/gsheng0/RegressionCalculator/blob/master/Screen%20Shot%202021-03-24%20at%201.10.29%20AM.png?raw=true)
 
+Where alpha is the learning rate.
+
+After millions of runs, the cost is slowly minimized, resulting in a decent approximation of a line of best fit.
+
+## Screenshots
+
+
