@@ -33,5 +33,6 @@ And the gradient function for *b* looks like this:
 From these gradient values, the parameters of the function can be updated as such:
 
 ![alt text](https://github.com/gsheng0/RegressionCalculator/blob/master/Screen%20Shot%202021-03-24%20at%201.10.16%20AM.png?raw=true)
+
 ![alt text](https://github.com/gsheng0/RegressionCalculator/blob/master/Screen%20Shot%202021-03-24%20at%201.10.29%20AM.png?raw=true)
 
