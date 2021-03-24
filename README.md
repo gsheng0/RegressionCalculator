@@ -42,4 +42,14 @@ After millions of runs, the cost is slowly minimized, resulting in a decent appr
 
 ## Screenshots
 
+![alt text](https://github.com/gsheng0/RegressionCalculator/blob/master/Screen%20Shot%202021-03-24%20at%201.14.36%20AM.png?raw=true)
+*A basic plot with four plotted points*
 
+![alt text](https://github.com/gsheng0/RegressionCalculator/blob/master/Screen%20Shot%202021-03-24%20at%201.10.29%20AM.png?raw=true)
+*The generated line of best fit for the points above*
+
+![alt text](https://github.com/gsheng0/RegressionCalculator/blob/master/Screen%20Shot%202021-03-24%20at%201.10.29%20AM.png?raw=true)
+*A more noisy set of points*
+
+![alt text](https://github.com/gsheng0/RegressionCalculator/blob/master/Screen%20Shot%202021-03-24%20at%201.10.29%20AM.png?raw=true)
+*The generated line of best fit for the points above*
