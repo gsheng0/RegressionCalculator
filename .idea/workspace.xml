@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32235095-2020-479d-aa35-4aeb3bbf23c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/nnattempt/Jajtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nnattempt/Layer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regression/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Function2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regression/Function2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Function3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regression/Function3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Optimizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regression/Optimizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Polynomial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regression/Polynomial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Term.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regression/Term.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regression/Vector.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,11 +36,11 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -86,18 +76,6 @@
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />

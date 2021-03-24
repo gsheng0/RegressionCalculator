@@ -1,5 +1,7 @@
 package nnattempt;
 
+import regression.Polynomial;
+
 import java.util.function.Function;
 
 public class Node{

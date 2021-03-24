@@ -18,13 +18,13 @@ public class App extends JPanel {
     private Polynomial function;
     private ArrayList<Vector> coords = new ArrayList<>();
     private int pointSize = 5;
-    private static Dimension size = new Dimension(800, 600);
-    public static final Function<Double, Double> SCREEN_TO_GRAPH_X = a -> a - 30;
-    public static final Function<Double, Double> SCREEN_TO_GRAPH_Y = a -> a * -1 + (size.height + 30);
-    public static final Function<Double, Double> GRAPH_TO_SCREEN_X = a -> a + 30;
-    public static final Function<Double, Double> GRAPH_TO_SCREEN_Y = a -> -1 * a + (size.height - 25);
-    public static final Function<Vector, Vector> GRAPH_TO_SCREEN = a -> new Vector(GRAPH_TO_SCREEN_X.apply(a.x), GRAPH_TO_SCREEN_Y.apply(a.y));
-    public static final Function<Vector, Vector> SCREEN_TO_GRAPH = a -> new Vector(SCREEN_TO_GRAPH_X.apply(a.x), SCREEN_TO_GRAPH_Y.apply(a.y));
+    private static Dimension size = new Dimension(1200, 600);
+    public static final Function<Double, Double> SCREEN_TO_GRAPH_X = a -> a - 30; //converts true x coordinates (relative to screen) to x coordinates relative to drawn axis
+    public static final Function<Double, Double> SCREEN_TO_GRAPH_Y = a -> a * -1 + (size.height + 30); //converts true y coordinates (java y coordinate system) to cartesian y coordinates relative to drawn axis
+    public static final Function<Double, Double> GRAPH_TO_SCREEN_X = a -> a + 30; //converts x coordinates relative to axis to true x coordinates relative to window
+    public static final Function<Double, Double> GRAPH_TO_SCREEN_Y = a -> -1 * a + (size.height - 25); //converts cartesian y coordinates relative to drawn axis to java y coordinates relative to window
+    public static final Function<Vector, Vector> GRAPH_TO_SCREEN = a -> new Vector(GRAPH_TO_SCREEN_X.apply(a.x), GRAPH_TO_SCREEN_Y.apply(a.y)); //condensed function for converting graph to true coordinates
+    public static final Function<Vector, Vector> SCREEN_TO_GRAPH = a -> new Vector(SCREEN_TO_GRAPH_X.apply(a.x), SCREEN_TO_GRAPH_Y.apply(a.y)); //condesned function for converting true to graph coordinates
 
 
     public App(){
@@ -42,20 +42,35 @@ public class App extends JPanel {
     public void setUpMenuBar(){
         setUpMenuBarComponents();
         bar = new JMenuBar();
+        //text field for manually entering coordinates
         bar.add(getSpacer(20));
         bar.add(coordinate);
+
+        //button for finding line of best fit
         bar.add(getSpacer(20));
         bar.add(optimize);
+
+        //button for clearing the screen
         bar.add(getSpacer(20));
         bar.add(clear);
+
+        //displays equation for line of best fit
         bar.add(getSpacer(20));
         bar.add(functionLabel);
+
+
+        //input for how many times to run
+        //if no input is given then default value is used
         bar.add(getSpacer(20));
         bar.add(new JLabel("Runs: "));
         bar.add(runs);
+
+        //input for learning rate
+        //if not input is given then default value is used
         bar.add(getSpacer(20));
         bar.add(new JLabel("Alpha: "));
         bar.add(alpha);
+
         frame.setJMenuBar(bar);
     }
 
@@ -65,20 +80,23 @@ public class App extends JPanel {
         g.setColor(Color.WHITE);
         g.fillRect(0, 0, size.width, size.height);
 
+        //drawing the x and y axes
         g.setColor(Color.BLACK);
         g.drawLine(30, size.height - 30, size.width - 30, size.height - 30);
         g.drawLine(30, size.height - 30, 30, 30);
 
+        //drawing inputted coordinates
         for(Vector vec : coords) {
             Vector temp = GRAPH_TO_SCREEN.apply(vec);
             g.fillRect((int)temp.x - pointSize / 2, (int)temp.y - pointSize / 2, pointSize, pointSize);
         }
 
+        //draw line of best fit if calculated
         if(function != null)
         {
             ArrayList<Vector> convert = new ArrayList<>();
             g.setColor(Color.BLACK);
-            for(int i = 0; i < 770; i++)
+            for(int i = 0; i < 1170; i++)
             {
                 double y = function.function.apply((double) i);
                 Vector converted = GRAPH_TO_SCREEN.apply(new Vector(i, y));
@@ -110,18 +128,19 @@ public class App extends JPanel {
 
             @Override
             public void keyPressed(KeyEvent e) {
-                if(e.getKeyCode() == KeyEvent.VK_ENTER)
+                if(e.getKeyCode() == KeyEvent.VK_ENTER) //parsing text input for coordinates
                 {
                     String updated = "";
-                    for(char c : coordinate.getText().toCharArray())
-                        if(c != ' ')
-                            updated += c;
+                    for(char c : coordinate.getText().toCharArray()) {
+                        if (c != ' ')
+                            updated += c; //filters out white space
+                    }
 
                     String[] coord = updated.split(",");
-                    if(coord.length < 2)
+                    if(coord.length < 2) //if there was no comma, then nothing happens
                         return;
                     try {
-                        coords.add(new Vector(Integer.parseInt(coord[0]), Integer.parseInt(coord[1])));
+                        coords.add(new Vector(Integer.parseInt(coord[0]), Integer.parseInt(coord[1]))); //makes sure both values are numbers
                     }
                     catch(Exception excp){
                         System.out.println("error");
@@ -150,6 +169,7 @@ public class App extends JPanel {
             public void keyPressed(KeyEvent e) {
                 if(e.getKeyCode() == KeyEvent.VK_ENTER){
                     try{
+                        //begins finding the line of best fit
                         Optimizer o = Optimizer.getInstance();
                         o.setRuns(Integer.parseInt(runs.getText()));
                     }
@@ -169,7 +189,7 @@ public class App extends JPanel {
         alpha.setPreferredSize(dim);
         alpha.setMaximumSize(dim);
         alpha.setMinimumSize(dim);
-        alpha.addKeyListener(new KeyListener() {
+        alpha.addKeyListener(new KeyListener() { //input listener for allowing user to input learning rate manually
             @Override
             public void keyTyped(KeyEvent e) {
 
@@ -198,7 +218,7 @@ public class App extends JPanel {
         optimize.addActionListener(e -> {
             Optimizer o = Optimizer.getInstance();
             o.setCoords(coords);
-            o.regress();               //////THIS IS THE LINE <------------------------------------RIGHT HERE
+            o.regress();               //begins linear regression
             function = o.getFunction();
             functionLabel.setText(function.toString());
         });
@@ -213,7 +233,7 @@ public class App extends JPanel {
         functionLabel = new JLabel();
 
     }
-    public static JMenu getSpacer(int x) {
+    public static JMenu getSpacer(int x) { //returns empty menu that provides spacing between non empty options on menu
         JMenu output = new JMenu();
         output.setEnabled(false);
         Dimension dim = new Dimension(x, 1);
@@ -226,7 +246,7 @@ public class App extends JPanel {
     {
         App app = new App();
     }
-    public class CoordinateClick implements MouseListener {
+    public class CoordinateClick implements MouseListener { //allows users to input coordinates by clicking on screen
         @Override
         public void mouseClicked(MouseEvent e) {
 
