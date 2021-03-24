@@ -18,4 +18,8 @@ This can be expressed mathematically as the following:
 
 ![alt text](https://github.com/gsheng0/RegressionCalculator/blob/master/Screen%20Shot%202021-03-24%20at%2012.22.37%20AM.png?raw=true)
 
-where *f(x)* is the current iteration of the linear best fit function with coefficient *a* and constant term *b*
+Where *f(x)* is the current iteration of the linear best fit function with coefficient *a* and constant term *b*
+
+Then, by using calculus, the function is able to minimized using gradient descent by deriving this cost function with respect to x, resulting in the cumulative gradient of all the points
+
+
