@@ -20,6 +20,8 @@ This can be expressed mathematically as the following:
 
 Where *f(x)* is the current iteration of the linear best fit function with coefficient *a* and constant term *b*
 
-Then, by using calculus, the function is able to minimized using gradient descent by deriving this cost function with respect to x, resulting in the cumulative gradient of all the points
+Then, by using calculus, the function is able to minimized using gradient descent by deriving this cost function with respect to *a* and *b*, resulting in the cumulative gradient of all the points for each of the two parameters of the eventual line of best fit function.
+
+The gradient function for *a* looks like this:
 
 
