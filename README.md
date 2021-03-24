@@ -15,4 +15,4 @@ When points are plotted, the magnitued of the vertical distance between that poi
 This forms the "cost function" or how far off the function is from being perfect.
 
 This can be expressed mathematically as the following:
-
+![alt text](https://github.com/gsheng0/RegressionCalculator/blob/master/Screen%20Shot%202021-03-24%20at%2012.22.37%20AM.png?raw=true)
