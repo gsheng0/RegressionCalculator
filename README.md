@@ -16,7 +16,7 @@ This forms the "cost function" or how far off the function is from being perfect
 
 This can be expressed mathematically as the following:
 
-![alt text](https://github.com/gsheng0/RegressionCalculator/blob/master/Screen%20Shot%202021-03-24%20at%2012.22.37%20AM.png?raw=true)
+![alt text](https://github.com/gsheng0/RegressionCalculator/blob/master/Screen%20Shot%202021-03-24%20at%2012.55.19%20AM.png?raw=true)
 
 Where *f(x)* is the current iteration of the linear best fit function with coefficient *a* and constant term *b*
 
@@ -24,4 +24,8 @@ Then, by using calculus, the function is able to minimized using gradient descen
 
 The gradient function for *a* looks like this:
 
+![alt text](https://github.com/gsheng0/RegressionCalculator/blob/master/Screen%20Shot%202021-03-24%20at%201.03.25%20AM.png?raw=true)
 
+And the gradient function for *b* looks like this:
+
+![alt text](https://github.com/gsheng0/RegressionCalculator/blob/master/Screen%20Shot%202021-03-24%20at%201.03.39%20AM.png?raw=true)
