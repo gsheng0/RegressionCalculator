@@ -53,3 +53,5 @@ After millions of runs, the cost is slowly minimized, resulting in a decent appr
 
 ![alt text](https://github.com/gsheng0/RegressionCalculator/blob/master/Screen%20Shot%202021-03-24%20at%201.15.43%20AM.png?raw=true)
 *The generated line of best fit for the points above*
+
+
